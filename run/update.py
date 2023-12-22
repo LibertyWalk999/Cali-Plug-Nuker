@@ -1,5 +1,8 @@
-import os
+import os, time
 import urllib.request
+from typing import Callable, Dict, List, Optional, Union
+
+cls: Callable[[], None] = lambda: os.system('cls || clear')
 
 cali_console_path = "../src/Cali_Console.py"
 cali_chat_path = "../src/Cali_Chat.py"
@@ -25,3 +28,7 @@ print("Cali_Console.py downloaded.")
 
 urllib.request.urlretrieve(cali_chat_url, cali_chat_path)
 print("Cali_Chat.py downloaded.")
+time.sleep(1)
+cls()
+print("Cali Plug has been updated! Please run 'Cali.py'")
+time.sleep(5)
